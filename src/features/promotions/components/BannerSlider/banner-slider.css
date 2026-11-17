@@ -1,0 +1,110 @@
+
+.banner-swiper {
+  width: 100%;
+  overflow: hidden;
+
+  --swiper-navigation-size: 12px;
+  --swiper-navigation-color: var(--brand-olive);
+  --swiper-pagination-color: var(--brand-gold);
+}
+
+/* ========================================
+   NAVIGATION BUTTONS
+======================================== */
+
+.banner-swiper .swiper-button-next,
+.banner-swiper .swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  margin-top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  border: 1px solid color-mix(in srgb, var(--brand-gold) 40%, transparent);
+  border-radius: 9999px;
+
+  background: color-mix(in srgb, white 88%, transparent);
+  color: var(--brand-olive);
+
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    opacity 180ms ease;
+}
+
+/* Chevron Icon Size */
+.banner-swiper .swiper-button-next::after,
+.banner-swiper .swiper-button-prev::after {
+  font-size: 12px !important;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* Hover */
+.banner-swiper .swiper-button-next:hover,
+.banner-swiper .swiper-button-prev:hover {
+  background: var(--brand-gold);
+  border-color: var(--brand-gold);
+}
+
+/* Disabled */
+.banner-swiper .swiper-button-disabled {
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+/* ========================================
+   PAGINATION
+======================================== */
+
+.banner-swiper .swiper-pagination {
+  bottom: 14px;
+}
+
+.banner-swiper .swiper-pagination-bullet {
+  width: 7px;
+  height: 7px;
+  opacity: 0.65;
+  background: white;
+
+  transition:
+    width 180ms ease,
+    opacity 180ms ease;
+}
+
+.banner-swiper .swiper-pagination-bullet-active {
+  width: 20px;
+  border-radius: 9999px;
+  opacity: 1;
+  background: var(--brand-gold);
+}
+
+/* ========================================
+   TABLET & MOBILE
+======================================== */
+
+@media (max-width: 1023px) {
+  .banner-swiper .swiper-button-next,
+  .banner-swiper .swiper-button-prev,
+  .banner-swiper .swiper-pagination {
+    display: none !important;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .banner-swiper *,
+  .banner-swiper *::before,
+  .banner-swiper *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+.banner-swiper .swiper-button-next::after,
+.banner-swiper .swiper-button-prev::after {
+  font-size: 4px !important;
+  color: red !important;
+}

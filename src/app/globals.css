@@ -1,26 +1,197 @@
+
 @import "tailwindcss";
 
+/* ========================================
+   AUVENA TECH — LIGHT DESIGN SYSTEM
+======================================== */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand Colors */
+  --brand-evergreen: #062726;
+  --brand-olive: #606c38;
+  --brand-gold: #BFA33E;
+  --brand-camel: #BB9457;
+  --brand-chiffon: #FFFBCC;
+
+  /* Background */
+  --background: #FFFAF7;
+  --surface: #FFFFFF;
+  --surface-muted: #F1F3E9;
+  --surface-gold: #F7F3E5;
+
+  /* Text */
+  --foreground: #062726;
+  --text-secondary: #52645B;
+  --text-muted: #85877D;
+  --text-inverse: #FFFFFF;
+
+  /* Borders */
+  --border: #E9E3DC;
+  --border-strong: #D8D8CE;
+  --border-focus: #475841;
+
+  /* Buttons */
+  --button-primary: #061A3E;
+  --button-primary-hover: #102B52;
+
+  --button-secondary: #ADC178;
+  --button-secondary-hover: #9EB36A;
+
+  --button-accent: #061A3E;
+  --button-outline: #061A3E;
+
+  /* Status Colors */
+  --success: #286344;
+  --success-bg: #E8F2EA;
+
+  --danger: #9B303D;
+  --danger-bg: #F8E9EB;
+
+  --warning: #8B5C16;
+  --warning-bg: #FFF4D9;
+
+  --info: #365C4B;
+  --info-bg: #EAF1EC;
+
+  /* Shadows */
+  --shadow-card: 0 2px 12px rgba(6, 39, 38, 0.05);
+  --shadow-dropdown: 0 8px 30px rgba(6, 39, 38, 0.10);
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
 }
+
+/* ========================================
+   TAILWIND CSS 4 THEME
+======================================== */
 
 @theme inline {
+  /* Fonts */
+  --font-sans: var(--font-main), sans-serif;
+  --font-fa-numbers: var(--font-fanum), sans-serif;
+
+  /* Brand */
+  --color-brand-evergreen: var(--brand-evergreen);
+  --color-brand-olive: var(--brand-olive);
+  --color-brand-gold: var(--brand-gold);
+  --color-brand-camel: var(--brand-camel);
+  --color-brand-chiffon: var(--brand-chiffon);
+
+  /* Background */
   --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-surface-gold: var(--surface-gold);
+
+  /* Text */
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-text-inverse: var(--text-inverse);
+
+  /* Borders */
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-border-focus: var(--border-focus);
+
+  /* Buttons */
+  --color-button-primary: var(--button-primary);
+  --color-button-primary-hover: var(--button-primary-hover);
+
+  --color-button-secondary: var(--button-secondary);
+  --color-button-secondary-hover: var(--button-secondary-hover);
+
+  --color-button-accent: var(--button-accent);
+  --color-button-outline: var(--button-outline);
+
+  /* Status */
+  --color-success: var(--success);
+  --color-success-bg: var(--success-bg);
+
+  --color-danger: var(--danger);
+  --color-danger-bg: var(--danger-bg);
+
+  --color-warning: var(--warning);
+  --color-warning-bg: var(--warning-bg);
+
+  --color-info: var(--info);
+  --color-info-bg: var(--info-bg);
+
+  /* Shadows */
+  --shadow-card: 0 2px 12px rgba(6, 39, 38, 0.05);
+  --shadow-dropdown: 0 8px 30px rgba(6, 39, 38, 0.10);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ========================================
+   GLOBAL STYLES
+======================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-main), sans-serif;
+  direction: rtl;
+  min-height: 100vh;
 }
+
+/* Persian Numbers Font */
+.font-fanum {
+  font-family: var(--font-fanum), var(--font-main), sans-serif;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--brand-olive);
+  color: var(--brand-evergreen);
+}
+
+/* Focus */
+:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 3px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--brand-olive);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-evergreen);
+}
+
+/* ========================================
+   GLOBAL CONTAINER
+======================================== */
+
+.container {
+  width: 100%;
+  max-width: 1536px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+
+
+
+
